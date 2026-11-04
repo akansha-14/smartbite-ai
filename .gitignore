@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest & testing cache
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Streamlit local config & cache
+.streamlit/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Office temporary lock files
+~$*
+*~
+
+# Logs & temp files
+*.log
+*.tmp

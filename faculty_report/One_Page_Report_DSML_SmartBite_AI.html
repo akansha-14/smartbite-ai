@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Page Report - Data Science and Machine Learning Laboratory Mini Project</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 10mm 12mm 8mm 12mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            color: #000;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.15;
+            font-size: 10pt;
+        }
+
+        .page-container {
+            width: 100%;
+            max-width: 190mm;
+            margin: 0 auto;
+        }
+
+        /* College Header */
+        .college-header {
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .trust-name {
+            font-size: 11pt;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .college-name {
+            font-size: 13pt;
+            font-weight: bold;
+            margin: 1px 0;
+            letter-spacing: 0.3px;
+        }
+
+        .autonomous-tag {
+            font-size: 9pt;
+            margin: 1px 0;
+        }
+
+        .accreditation-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 8.5pt;
+            font-weight: bold;
+            margin: 2px 0;
+            padding: 0 4px;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 8.5pt;
+            margin: 1px 0 4px 0;
+            padding: 0 4px;
+        }
+
+        .contact-row a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        .dept-header {
+            text-align: center;
+            border-top: 1.5px solid #000;
+            padding-top: 4px;
+            margin-top: 2px;
+        }
+
+        .dept-title {
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .acad-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 9.5pt;
+            font-weight: bold;
+            margin: 2px 0 4px 0;
+            padding: 0 4px;
+        }
+
+        .report-title {
+            text-align: center;
+            font-size: 11.5pt;
+            font-weight: bold;
+            text-decoration: underline;
+            margin: 4px 0 6px 0;
+        }
+
+        /* Main Box Table */
+        .main-box-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1.5px solid #000;
+            margin-bottom: 4px;
+        }
+
+        .main-box-table td {
+            border: 1.2px solid #000;
+            padding: 4px 6px;
+            vertical-align: top;
+        }
+
+        .title-cell {
+            text-align: center;
+            padding: 6px 8px !important;
+        }
+
+        .project-title {
+            font-size: 12.5pt;
+            font-weight: bold;
+            margin: 0 0 2px 0;
+        }
+
+        .sdg-mapped {
+            font-size: 10pt;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .section-label {
+            font-size: 10.5pt;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .abstract-p {
+            font-size: 9.2pt;
+            text-align: justify;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .obj-list {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 9.2pt;
+            line-height: 1.2;
+        }
+
+        .obj-list li {
+            margin-bottom: 1.5px;
+        }
+
+        .dataset-section {
+            font-size: 9.2pt;
+            line-height: 1.2;
+        }
+
+        .dataset-section ul {
+            margin: 2px 0 0 0;
+            padding-left: 18px;
+        }
+
+        .dataset-section li {
+            margin-bottom: 1.5px;
+        }
+
+        .software-section {
+            font-size: 9pt;
+            line-height: 1.22;
+        }
+
+        .algorithm-section {
+            font-size: 9.2pt;
+            line-height: 1.22;
+        }
+
+        .algorithm-list {
+            margin: 2px 0 0 0;
+            padding-left: 18px;
+        }
+
+        /* Student Table */
+        .student-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 3px;
+        }
+
+        .student-table th, .student-table td {
+            border: 1px solid #000;
+            padding: 3px 5px;
+            font-size: 9pt;
+        }
+
+        .student-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .guide-section {
+            font-size: 9.8pt;
+            font-weight: bold;
+            padding: 4px 6px !important;
+        }
+
+        .guide-name {
+            font-weight: normal;
+            color: #002b66;
+        }
+
+        /* Footer */
+        .page-note {
+            font-size: 8pt;
+            font-style: italic;
+            color: #444;
+            margin: 2px 0;
+        }
+
+        .college-footer {
+            text-align: center;
+            font-size: 7.5pt;
+            color: #333;
+            border-top: 0.8px solid #888;
+            padding-top: 2px;
+            margin-top: 2px;
+            line-height: 1.2;
+        }
+
+        @media print {
+            body {
+                font-size: 9.5pt;
+            }
+            .page-container {
+                max-width: 100%;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+
+    <!-- Print Action Bar for Browser Viewing -->
+    <div class="no-print" style="background:#e2e8f0; padding:8px 14px; margin-bottom:10px; border-radius:6px; display:flex; justify-content:space-between; align-items:center; font-family:sans-serif; font-size:13px;">
+        <span><strong>Student Submission Report</strong> &mdash; Exact MMCOE 1-Page Format</span>
+        <button onclick="window.print()" style="background:#1B4332; color:white; border:none; padding:6px 14px; border-radius:4px; font-weight:bold; cursor:pointer;">🖨️ Print to PDF (1 Page)</button>
+    </div>
+
+    <!-- College Header -->
+    <div class="college-header">
+        <div class="trust-name">Marathwada Mitra Mandal's</div>
+        <div class="college-name">COLLEGE OF ENGINEERING, Karvenagar, Pune - 52</div>
+        <div class="autonomous-tag">An Autonomous Institute permanently affiliated to SPPU</div>
+        
+        <div class="accreditation-row">
+            <span>NAAC: A ++ | NBA Accredited</span>
+            <span>Best College Award by SPPU</span>
+        </div>
+        
+        <div class="contact-row">
+            <span>website: <a href="http://www.mmcoe.edu.in">www.mmcoe.edu.in</a></span>
+            <span>email id: mmcoe@mmcoe.edu.in</span>
+        </div>
+
+        <div class="dept-header">
+            <div class="dept-title">DEPARTMENT OF COMPUTER ENGINEERING</div>
+            <div class="acad-row">
+                <span>A.Y. 2026-27</span>
+                <span>Class-TY &nbsp;&nbsp;&nbsp;&nbsp; Semester-V</span>
+            </div>
+        </div>
+
+        <div class="report-title">One Page Report on Data Science and Machine Learning Laboratory Mini Project</div>
+    </div>
+
+    <!-- Main Bordered Box -->
+    <table class="main-box-table">
+        <!-- Row 1: Title & SDG -->
+        <tr>
+            <td class="title-cell">
+                <div class="project-title">TITLE OF PROJECT – SMARTBITE AI: SMART CAMPUS FOOD WASTE PREDICTION AND OPTIMIZATION SYSTEM</div>
+                <div class="sdg-mapped">SDG Mapped – SDG 12: Responsible Consumption & Production (Target 12.3), SDG 2: Zero Hunger, SDG 13: Climate Action</div>
+            </td>
+        </tr>
+
+        <!-- Row 2: Abstract -->
+        <tr>
+            <td>
+                <div class="section-label">Abstract :</div>
+                <p class="abstract-p">
+                    Institutional cafeterias face significant operational challenges in balancing bulk food production against volatile diner attendance, resulting in avoidable food surplus, economic loss, and landfill methane emissions. SmartBite AI delivers an end-to-end supervised machine learning system engineered to predict pre-service food waste (in kilograms) before cooking shifts commence. Utilizing a synthetic operational dataset of 5,000 cafeteria records strictly grounded in physical mass conservation (Food Prepared = Food Consumed + Food Wasted) with pre-meal feature quarantine, four regression algorithms—Linear Regression, Decision Tree, Random Forest, and Gradient Boosting—were benchmarked on an 80/20 train-test split. The Gradient Boosting Regressor achieved champion predictive accuracy with a Test Mean Absolute Error (MAE) of 15.08 kg, Root Mean Squared Error (RMSE) of 19.34 kg, and an R² score of 0.806, explaining 80.6% of waste variance and significantly outperforming the baseline linear model (R² = 0.655). Feature importance analysis indicates food preparation volume, meal slot, historical attendance, and menu category as primary waste drivers. Deployed through an interactive Streamlit graphical interface with staged cooking schedules, the system equips dining managers with proactive decision support to curb batch surplus, advancing UN Sustainable Development Goals 12, 2, and 13.
+                </p>
+            </td>
+        </tr>
+
+        <!-- Row 3: Objectives -->
+        <tr>
+            <td>
+                <div class="section-label">Objectives:</div>
+                <ol class="obj-list">
+                    <li>To formulate a realistic cafeteria operational dataset adhering to mass conservation and strict anti-leakage pre-meal quarantine.</li>
+                    <li>To engineer operational predictors and benchmark four supervised ML algorithms (Linear Regression, Decision Tree, Random Forest, Gradient Boosting).</li>
+                    <li>To evaluate model generalization using standard metrics (MAE, RMSE, R²) and extract feature importance governing food surplus.</li>
+                    <li>To deploy an interactive Streamlit graphical interface enabling real-time waste predictions, staged batch cooking, and SDG impact quantification.</li>
+                </ol>
+            </td>
+        </tr>
+
+        <!-- Row 4: Dataset -->
+        <tr>
+            <td>
+                <div class="section-label">Dataset –</div>
+                <div class="dataset-section">
+                    <ul>
+                        <li><strong>Type of dataset:</strong> Multivariate Tabular Cafeteria Operations Dataset (5,000 shift records, synthetic)</li>
+                        <li><strong>Source (put link):</strong> Local Synthetic Pipeline (<code>data/synthetic_cafeteria_food_waste.csv</code>) / Project Repository</li>
+                        <li><strong>Attributes (comma separated):</strong> <code>date, day_of_week, meal_type, menu_category, is_weekend, is_holiday, is_exam_week, weather_condition, temperature_c, historical_avg_diners, food_prepared_kg, actual_diners_served, actual_food_eaten_kg, food_waste_kg</code></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Row 5: Software & Functions -->
+        <tr>
+            <td>
+                <div class="software-section">
+                    <div><strong>Software (Front, Back):</strong> Frontend: Streamlit 1.30+ Web Interface, Plotly Express & Graph Objects | Backend: Python 3.13, Scikit-Learn Engine</div>
+                    <div style="margin-top:2px;"><strong>Library:</strong> pandas, numpy, scikit-learn, plotly, streamlit, joblib, pytest</div>
+                    <div style="margin-top:2px;"><strong>Functions Used:</strong> <code>train_test_split()</code>, <code>StandardScaler()</code>, <code>OneHotEncoder()</code>, <code>ColumnTransformer()</code>, <code>Pipeline()</code>, <code>mean_absolute_error()</code>, <code>mean_squared_error()</code>, <code>r2_score()</code>, <code>cross_val_score()</code>, <code>pd.read_csv()</code>, <code>df.describe()</code>, <code>joblib.dump()</code>, <code>joblib.load()</code></div>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Row 6: Machine Learning Algorithm -->
+        <tr>
+            <td>
+                <div class="section-label">Machine Learning Algorithm –</div>
+                <div class="algorithm-section">
+                    <ol class="algorithm-list">
+                        <li><strong>Linear Regression</strong> (Baseline Model | Test MAE: 20.31 kg, R²: 0.655)</li>
+                        <li><strong>Decision Tree Regressor</strong> (Non-linear Rule Tree | Test MAE: 19.82 kg, R²: 0.682)</li>
+                        <li><strong>Random Forest Regressor</strong> (Ensemble Bagging - 100 Trees | Test MAE: 15.68 kg, R²: 0.793)</li>
+                        <li><strong>Gradient Boosting Regressor</strong> (Champion Boosting Model | Test MAE: 15.08 kg, RMSE: 19.34 kg, R²: 0.806)</li>
+                    </ol>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Row 7: Student Information -->
+        <tr>
+            <td style="padding: 4px 6px;">
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">sr.no</th>
+                            <th style="width: 25%;">Roll Number</th>
+                            <th style="width: 45%;">Name of the Student</th>
+                            <th style="width: 20%;">Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="text-align: center; color: #002b66; font-weight: bold;">[Enter Roll No]</td>
+                            <td style="color: #002b66; font-weight: bold;">Akansha</td>
+                            <td style="text-align: center;">TY Computer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Row 8: Guide Information -->
+        <tr>
+            <td class="guide-section">
+                <span>Name of Guide – </span>
+                <span class="guide-name">Prof. / Dr. [Enter Faculty Guide Name]</span>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Footer Note & Info -->
+    <div class="page-note">Note: Must be written in a single page and in a given format only.</div>
+    <div class="college-footer">
+        www.mmcoe.edu.in &nbsp;|&nbsp; (020) 25479811/12 &nbsp;|&nbsp; Sr. No. 18, Plot No. 5/3, CTS No- 205, Karvenagar, Pune- 411052<br>
+        E: mmcoe@mmcoe.edu.in &nbsp;|&nbsp; M: (+91) 7720097780 / 81 / 82
+    </div>
+
+</div>
+
+</body>
+</html>

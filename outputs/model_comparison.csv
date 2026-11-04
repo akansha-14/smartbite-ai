@@ -1,0 +1,5 @@
+Model,MAE (kg),RMSE (kg),MSE (kg²),R² Score
+Gradient Boosting,15.0825,19.761,390.4961,0.8059
+Random Forest,15.9019,21.0716,444.0123,0.7793
+Linear Regression,15.9292,20.7732,431.5244,0.7856
+Decision Tree,18.2647,24.6754,608.8774,0.6974

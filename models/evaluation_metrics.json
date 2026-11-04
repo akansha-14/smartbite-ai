@@ -1,0 +1,507 @@
+{
+  "metrics": {
+    "Linear Regression": {
+      "test": {
+        "MAE": 15.9292,
+        "MSE": 431.5244,
+        "RMSE": 20.7732,
+        "R2": 0.7856
+      },
+      "train": {
+        "MAE": 15.8263,
+        "MSE": 417.567,
+        "RMSE": 20.4345,
+        "R2": 0.801
+      }
+    },
+    "Random Forest": {
+      "test": {
+        "MAE": 15.9019,
+        "MSE": 444.0123,
+        "RMSE": 21.0716,
+        "R2": 0.7793
+      },
+      "train": {
+        "MAE": 7.2202,
+        "MSE": 94.2177,
+        "RMSE": 9.7066,
+        "R2": 0.9551
+      }
+    },
+    "Gradient Boosting": {
+      "test": {
+        "MAE": 15.0825,
+        "MSE": 390.4961,
+        "RMSE": 19.761,
+        "R2": 0.8059
+      },
+      "train": {
+        "MAE": 10.9432,
+        "MSE": 192.5132,
+        "RMSE": 13.8749,
+        "R2": 0.9083
+      }
+    },
+    "Decision Tree": {
+      "test": {
+        "MAE": 18.2647,
+        "MSE": 608.8774,
+        "RMSE": 24.6754,
+        "R2": 0.6974
+      },
+      "train": {
+        "MAE": 13.4191,
+        "MSE": 319.0558,
+        "RMSE": 17.8621,
+        "R2": 0.848
+      }
+    }
+  },
+  "feature_importances": {
+    "Linear Regression": [
+      {
+        "Feature": "food_prepared_kg",
+        "Importance": 106.77510476651946
+      },
+      {
+        "Feature": "meals_prepared",
+        "Importance": 60.67022356971636
+      },
+      {
+        "Feature": "meal_type_Breakfast",
+        "Importance": 18.35074358401028
+      },
+      {
+        "Feature": "meal_type_Lunch",
+        "Importance": 13.8905641668341
+      },
+      {
+        "Feature": "day_of_week_Friday",
+        "Importance": 6.402537385713222
+      },
+      {
+        "Feature": "menu_category_Non-Vegetarian",
+        "Importance": 5.081433036644122
+      },
+      {
+        "Feature": "meal_type_Dinner",
+        "Importance": 4.460179417176109
+      },
+      {
+        "Feature": "menu_category_Vegetarian",
+        "Importance": 4.03074347063674
+      },
+      {
+        "Feature": "is_weekend",
+        "Importance": 3.3470646430019677
+      },
+      {
+        "Feature": "day_of_week_Tuesday",
+        "Importance": 2.7832004506689265
+      },
+      {
+        "Feature": "day_of_week_Thursday",
+        "Importance": 2.5788938944280666
+      },
+      {
+        "Feature": "special_event_Yes",
+        "Importance": 2.5582996145200587
+      },
+      {
+        "Feature": "special_event_No",
+        "Importance": 2.558299614520056
+      },
+      {
+        "Feature": "day_of_week_Saturday",
+        "Importance": 2.3870326377614934
+      },
+      {
+        "Feature": "day_of_week_Wednesday",
+        "Importance": 1.5760806159233485
+      },
+      {
+        "Feature": "meals_per_staff",
+        "Importance": 1.3543919161808207
+      },
+      {
+        "Feature": "menu_category_Mixed",
+        "Importance": 1.0506895660073536
+      },
+      {
+        "Feature": "day_of_week_Monday",
+        "Importance": 0.9760716833324761
+      },
+      {
+        "Feature": "day_of_week_Sunday",
+        "Importance": 0.8753233791218681
+      },
+      {
+        "Feature": "kitchen_staff",
+        "Importance": 0.8212459035948996
+      },
+      {
+        "Feature": "holiday_No",
+        "Importance": 0.6538227234519919
+      },
+      {
+        "Feature": "holiday_Yes",
+        "Importance": 0.653822723451981
+      },
+      {
+        "Feature": "temperature_C",
+        "Importance": 0.4685562365046096
+      },
+      {
+        "Feature": "prep_per_experience",
+        "Importance": 0.37548946187433074
+      },
+      {
+        "Feature": "staff_experience_years",
+        "Importance": 0.31670117189497626
+      },
+      {
+        "Feature": "humidity_percent",
+        "Importance": 0.2567267642561803
+      },
+      {
+        "Feature": "previous_waste_kg",
+        "Importance": 0.17751739140703499
+      }
+    ],
+    "Random Forest": [
+      {
+        "Feature": "food_prepared_kg",
+        "Importance": 0.7600292871352696
+      },
+      {
+        "Feature": "meals_prepared",
+        "Importance": 0.08577823530703213
+      },
+      {
+        "Feature": "previous_waste_kg",
+        "Importance": 0.025043852824471764
+      },
+      {
+        "Feature": "humidity_percent",
+        "Importance": 0.018608691747886416
+      },
+      {
+        "Feature": "meals_per_staff",
+        "Importance": 0.017811624272919307
+      },
+      {
+        "Feature": "temperature_C",
+        "Importance": 0.017679533028803575
+      },
+      {
+        "Feature": "prep_per_experience",
+        "Importance": 0.01377377131866356
+      },
+      {
+        "Feature": "staff_experience_years",
+        "Importance": 0.010355653146603281
+      },
+      {
+        "Feature": "day_of_week_Saturday",
+        "Importance": 0.009491343380852316
+      },
+      {
+        "Feature": "day_of_week_Sunday",
+        "Importance": 0.0070019584201590915
+      },
+      {
+        "Feature": "day_of_week_Friday",
+        "Importance": 0.005773282554593704
+      },
+      {
+        "Feature": "menu_category_Vegetarian",
+        "Importance": 0.00355974024730674
+      },
+      {
+        "Feature": "kitchen_staff",
+        "Importance": 0.0034184609505682646
+      },
+      {
+        "Feature": "menu_category_Non-Vegetarian",
+        "Importance": 0.0032319867659930126
+      },
+      {
+        "Feature": "is_weekend",
+        "Importance": 0.002165267978678988
+      },
+      {
+        "Feature": "meal_type_Dinner",
+        "Importance": 0.002127418847542699
+      },
+      {
+        "Feature": "day_of_week_Tuesday",
+        "Importance": 0.0019411895744923535
+      },
+      {
+        "Feature": "meal_type_Lunch",
+        "Importance": 0.0017265996089239207
+      },
+      {
+        "Feature": "day_of_week_Monday",
+        "Importance": 0.0017203469932303402
+      },
+      {
+        "Feature": "day_of_week_Thursday",
+        "Importance": 0.0017179380736501502
+      },
+      {
+        "Feature": "menu_category_Mixed",
+        "Importance": 0.0015032737773368534
+      },
+      {
+        "Feature": "day_of_week_Wednesday",
+        "Importance": 0.0014853422474062235
+      },
+      {
+        "Feature": "special_event_No",
+        "Importance": 0.0009856235925185305
+      },
+      {
+        "Feature": "special_event_Yes",
+        "Importance": 0.0009603004858110688
+      },
+      {
+        "Feature": "meal_type_Breakfast",
+        "Importance": 0.0009372441659733909
+      },
+      {
+        "Feature": "holiday_No",
+        "Importance": 0.0006595752612096063
+      },
+      {
+        "Feature": "holiday_Yes",
+        "Importance": 0.0005124582921031736
+      }
+    ],
+    "Gradient Boosting": [
+      {
+        "Feature": "food_prepared_kg",
+        "Importance": 0.8010632082572793
+      },
+      {
+        "Feature": "meals_prepared",
+        "Importance": 0.08075520079280396
+      },
+      {
+        "Feature": "previous_waste_kg",
+        "Importance": 0.012790260354019098
+      },
+      {
+        "Feature": "day_of_week_Saturday",
+        "Importance": 0.012227574303874753
+      },
+      {
+        "Feature": "meals_per_staff",
+        "Importance": 0.009810615060189754
+      },
+      {
+        "Feature": "prep_per_experience",
+        "Importance": 0.009687031143671018
+      },
+      {
+        "Feature": "temperature_C",
+        "Importance": 0.009484565944837455
+      },
+      {
+        "Feature": "meal_type_Dinner",
+        "Importance": 0.009063199315987872
+      },
+      {
+        "Feature": "humidity_percent",
+        "Importance": 0.009016558564700341
+      },
+      {
+        "Feature": "day_of_week_Friday",
+        "Importance": 0.007734858008501922
+      },
+      {
+        "Feature": "day_of_week_Sunday",
+        "Importance": 0.006765025332289252
+      },
+      {
+        "Feature": "meal_type_Lunch",
+        "Importance": 0.00654562572210058
+      },
+      {
+        "Feature": "menu_category_Non-Vegetarian",
+        "Importance": 0.005637903441616188
+      },
+      {
+        "Feature": "staff_experience_years",
+        "Importance": 0.005615454945769609
+      },
+      {
+        "Feature": "kitchen_staff",
+        "Importance": 0.0033855288809660606
+      },
+      {
+        "Feature": "menu_category_Vegetarian",
+        "Importance": 0.0024571723320439176
+      },
+      {
+        "Feature": "meal_type_Breakfast",
+        "Importance": 0.0017559894878673287
+      },
+      {
+        "Feature": "day_of_week_Wednesday",
+        "Importance": 0.001002127172371086
+      },
+      {
+        "Feature": "day_of_week_Thursday",
+        "Importance": 0.0008896618841332626
+      },
+      {
+        "Feature": "day_of_week_Tuesday",
+        "Importance": 0.0008852069803233377
+      },
+      {
+        "Feature": "day_of_week_Monday",
+        "Importance": 0.0006658681002453468
+      },
+      {
+        "Feature": "is_weekend",
+        "Importance": 0.0006335195649635237
+      },
+      {
+        "Feature": "special_event_No",
+        "Importance": 0.0005278944292780232
+      },
+      {
+        "Feature": "special_event_Yes",
+        "Importance": 0.0005118827143774406
+      },
+      {
+        "Feature": "holiday_No",
+        "Importance": 0.0004879633706469133
+      },
+      {
+        "Feature": "holiday_Yes",
+        "Importance": 0.0003350076748117912
+      },
+      {
+        "Feature": "menu_category_Mixed",
+        "Importance": 0.00026509622033116963
+      }
+    ],
+    "Decision Tree": [
+      {
+        "Feature": "food_prepared_kg",
+        "Importance": 0.8511475560718338
+      },
+      {
+        "Feature": "meals_prepared",
+        "Importance": 0.07875906598793346
+      },
+      {
+        "Feature": "day_of_week_Saturday",
+        "Importance": 0.01246022195920855
+      },
+      {
+        "Feature": "previous_waste_kg",
+        "Importance": 0.01194074030651673
+      },
+      {
+        "Feature": "day_of_week_Sunday",
+        "Importance": 0.007131305000213279
+      },
+      {
+        "Feature": "day_of_week_Friday",
+        "Importance": 0.0064297940166023445
+      },
+      {
+        "Feature": "meal_type_Lunch",
+        "Importance": 0.005469080416273848
+      },
+      {
+        "Feature": "staff_experience_years",
+        "Importance": 0.005283128408984602
+      },
+      {
+        "Feature": "prep_per_experience",
+        "Importance": 0.004937252170219647
+      },
+      {
+        "Feature": "temperature_C",
+        "Importance": 0.0037479844948309416
+      },
+      {
+        "Feature": "is_weekend",
+        "Importance": 0.003495165119790868
+      },
+      {
+        "Feature": "meals_per_staff",
+        "Importance": 0.0021736321459375663
+      },
+      {
+        "Feature": "humidity_percent",
+        "Importance": 0.0015345420365904723
+      },
+      {
+        "Feature": "menu_category_Vegetarian",
+        "Importance": 0.001331736520698328
+      },
+      {
+        "Feature": "holiday_Yes",
+        "Importance": 0.0012394338658149385
+      },
+      {
+        "Feature": "kitchen_staff",
+        "Importance": 0.0009794042778888692
+      },
+      {
+        "Feature": "meal_type_Breakfast",
+        "Importance": 0.0009190229129925654
+      },
+      {
+        "Feature": "day_of_week_Tuesday",
+        "Importance": 0.00042885292644166716
+      },
+      {
+        "Feature": "day_of_week_Wednesday",
+        "Importance": 0.0002489835140254309
+      },
+      {
+        "Feature": "special_event_Yes",
+        "Importance": 0.00021575344641271572
+      },
+      {
+        "Feature": "meal_type_Dinner",
+        "Importance": 0.0001273444007893344
+      },
+      {
+        "Feature": "day_of_week_Monday",
+        "Importance": 0.0
+      },
+      {
+        "Feature": "day_of_week_Thursday",
+        "Importance": 0.0
+      },
+      {
+        "Feature": "holiday_No",
+        "Importance": 0.0
+      },
+      {
+        "Feature": "special_event_No",
+        "Importance": 0.0
+      },
+      {
+        "Feature": "menu_category_Mixed",
+        "Importance": 0.0
+      },
+      {
+        "Feature": "menu_category_Non-Vegetarian",
+        "Importance": 0.0
+      }
+    ]
+  },
+  "split_info": {
+    "train_samples": 4000,
+    "test_samples": 1000,
+    "chronological": false
+  }
+}

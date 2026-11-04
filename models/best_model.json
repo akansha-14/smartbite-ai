@@ -1,0 +1,8 @@
+{
+  "best_model_name": "Gradient Boosting",
+  "selection_criterion": "Lowest Mean Absolute Error (MAE) on held-out test set",
+  "lowest_test_mae_kg": 15.0825,
+  "test_rmse_kg": 19.761,
+  "test_r2": 0.8059,
+  "pipeline_file": "gradient_boosting.joblib"
+}
