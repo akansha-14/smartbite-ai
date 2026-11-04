@@ -55,13 +55,13 @@ All models were evaluated on an identical held-out test set of **1,000 operation
 ## 📈 Visualizations & Empirical Findings
 
 <p align="center">
-  <img src="faculty_report/fig1_model_comparison.png" width="48%" alt="Model Comparison Benchmark" />
-  <img src="faculty_report/fig2_feature_importance.png" width="48%" alt="Gini Feature Importance" />
+  <img src="assets/fig1_model_comparison.png" width="48%" alt="Model Comparison Benchmark" />
+  <img src="assets/fig2_feature_importance.png" width="48%" alt="Gini Feature Importance" />
 </p>
 
 <p align="center">
-  <img src="faculty_report/fig3_actual_vs_predicted.png" width="48%" alt="Actual vs Predicted Surplus" />
-  <img src="faculty_report/fig4_meal_distribution.png" width="48%" alt="Meal Slot Waste Distribution" />
+  <img src="assets/fig3_actual_vs_predicted.png" width="48%" alt="Actual vs Predicted Surplus" />
+  <img src="assets/fig4_meal_distribution.png" width="48%" alt="Meal Slot Waste Distribution" />
 </p>
 
 ### Insights from the Visualizations:
@@ -129,14 +129,11 @@ smartbite-ai/
 │   ├── test_training.py       # Tests for training pipeline & artifacts
 │   └── test_prediction.py     # Tests for inference & guardrail validation
 │
-└── faculty_report/            # Academic reports and presentation materials
-    ├── Mini_Project_Report_SmartBite_AI_Tanish_Moro.docx  # 5-6 Page Academic Report
-    ├── Mini_Project_Report_SmartBite_AI_Tanish_Moro.html  # Printable A4 PDF Report
-    ├── Mini_Project_Report_SmartBite_AI_Tanish_Moro.md    # Markdown Full Report
-    ├── Mini_Project_Presentation_SmartBite_AI_Tanish_Moro.pptx # 10-Slide Viva Deck
-    ├── One_Page_Report_DSML_SmartBite_AI.docx             # 1-Page Summary Report
-    ├── One_Page_Report_DSML_SmartBite_AI.html             # 1-Page Printable HTML
-    └── *.png                                              # High-resolution benchmark figures
+└── assets/                    # High-resolution benchmark figures & evaluation plots
+    ├── fig1_model_comparison.png
+    ├── fig2_feature_importance.png
+    ├── fig3_actual_vs_predicted.png
+    └── fig4_meal_distribution.png
 ```
 
 ---
@@ -192,13 +189,12 @@ SmartBite AI directly maps to three core UN SDGs:
 
 ---
 
-## 👨‍💻 Student Author & Academic Details
+## 👩‍💻 Author & Academic Details
 
-* **Student Name:** Tanish Moro
-* **Roll Number:** B24CE1073
-* **Class / Division:** TY 2
-* **Department:** Department of Computer Engineering
+* **Author:** Akansha Dhage
+* **GitHub:** [@akansha-14](https://github.com/akansha-14)
 * **Institution:** Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune - 52
+* **Department:** Department of Computer Engineering
 * **Course:** Data Science and Machine Learning Laboratory (A.Y. 2026-27 | Semester-V)
 
 ---
