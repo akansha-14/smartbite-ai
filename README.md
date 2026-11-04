@@ -41,8 +41,8 @@ This leads to:
 
 All models were evaluated on an identical held-out test set of **1,000 operational cafeteria shifts** (80% training / 20% test split, random seed 42):
 
-| Machine Learning Model | Train MAE | Train $R^2$ | Test MAE (kg) | Test RMSE (kg) | Test $R^2$ Score | 5-Fold CV $R^2$ | Status |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Machine Learning Model | Train MAE | Train R² | Test MAE (kg) | Test RMSE (kg) | Test R² Score | 5-Fold CV R² | Status |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Gradient Boosting** | **12.86 kg** | **0.865** | **15.08 kg** | **19.34 kg** | **0.8059** | **0.798 ± 0.008** | 🏆 **Champion Model** |
 | **Random Forest Regressor** | 11.24 kg | 0.892 | 15.68 kg | 20.15 kg | 0.7932 | 0.784 ± 0.009 | Ensemble Baseline |
 | **Linear Regression** | 20.48 kg | 0.654 | 20.31 kg | 25.87 kg | 0.6551 | 0.648 ± 0.012 | Parametric Baseline |
@@ -79,8 +79,8 @@ All models were evaluated on an identical held-out test set of **1,000 operation
 
 The application provides an accessible, academic-grade web dashboard:
 
-1. **🏠 Project Overview:** Executive summary, KPI cards (Test MAE, $R^2$), technical pillars, and an interactive **Comparative Boxplot vs. Frequency Distribution** of meal slot waste.
-2. **🔮 Predict Food Waste:** Pre-meal operational scenario form. Input day, meal type, menu category, planned prep, and weather to obtain real-time surplus predictions ($\pm \text{MAE}$ uncertainty) and 75/25 staged-cooking recommendations.
+1. **🏠 Project Overview:** Executive summary, KPI cards (Test MAE, R²), technical pillars, and an interactive **Comparative Boxplot vs. Frequency Distribution** of meal slot waste.
+2. **🔮 Predict Food Waste:** Pre-meal operational scenario form. Input day, meal type, menu category, planned prep, and weather to obtain real-time surplus predictions (± MAE uncertainty) and 75/25 staged-cooking recommendations.
 3. **📊 Dataset Explorer:** Tabular inspection, missing value verification, summary statistics, feature distribution plots, and correlation heatmaps across 5,000 shift records.
 4. **📈 Model Comparison & Performance:** Side-by-side benchmark tables, residual diagnostics, Actual vs. Predicted scatter plots, and Gini feature importance charts.
 5. **🌿 Insights & SDG Impact:** Data-driven operational guidelines and quantitative environmental impact tracking mapped to UN Sustainable Development Goals.
@@ -188,7 +188,7 @@ SmartBite AI directly maps to three core UN SDGs:
 * **🍲 SDG 2: Zero Hunger (Target 2.4)**  
   Pre-service surplus forecasting hours in advance enables proactive coordination with campus food-recovery programs, redistributing edible meals before spoilage.
 * **🌍 SDG 13: Climate Action (Target 13.3)**  
-  By diverting an estimated **15 to 20 tonnes** of food waste from anaerobic landfills each year, the system eliminates **37.5 to 50 Metric Tonnes of CO2 equivalent ($MT\ CO_2e$)** in methane emissions.
+  By diverting an estimated **15 to 20 tonnes** of food waste from anaerobic landfills each year, the system eliminates **37.5 to 50 Metric Tonnes of CO2 equivalent (MT CO₂e)** in methane emissions.
 
 ---
 
